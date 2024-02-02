@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Fetch API</h1>
+    <h2>The Fetch() Method</h2>
+    <p>In JavaScript the fetch() method was used to make asynchronous request.</p>
+    <pre class = "demo">The text file will appear here</pre>
+    <script>
+        getText("kanta.txt");// call the function getText file woth one parameter.
+
+        async function getText(file){
+            let res = await fetch(file); //x refers to response
+            let data = await res.text();
+            document.querySelector(".demo").innerHTML = data;
+        }
+
+    </script>
+</body>
+</html>
